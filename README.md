@@ -16,10 +16,11 @@ curl localhost:8090/profiles -u admin:admin
 curl localhost:8090/profiles/1 -u admin:admin
 
 #POST
-curl -X POST localhost:8090/profiles -H "Content-type:application/json" -d 
+
+Please use postman to test the POST method
 {
 	"name":"ABC",
 	"height":"12.3",
 	"gender":"male"
 }
--u admin:admin
+admin:admin
