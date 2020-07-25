@@ -13,9 +13,13 @@ To run the application
 #GET
 curl localhost:8090/profiles -u admin:admin
 
-curl localhost:8080/profiles/1 -u admin:admin
+curl localhost:8090/profiles/1 -u admin:admin
 
 #POST
-curl -X POST localhost:8090/profiles -H "Content-type:application/json"
-	-d {\"name\":\"ABC\",\"gender\":\"male\",\"height\":\"8.88cm\"} -u admin:admin
-
+curl -X POST localhost:8090/profiles -H "Content-type:application/json" -d 
+{
+	"name":"ABC",
+	"height":"12.3",
+	"gender":"male"
+}
+-u admin:admin
