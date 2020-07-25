@@ -2,9 +2,11 @@
 Practical test for sbss
 
  #execute the application
+ 
  mvn spring-boot:run
  
- #basic autentication
+ #BASIC autentication
+ 
 username:admin
 password:admin
 
