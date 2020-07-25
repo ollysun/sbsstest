@@ -27,9 +27,11 @@ public class SbssTestController {
 
     // Find
     @GetMapping("/{id}")
-    Profile findOne(@PathVariable @Min(1) Long id) {
-        return profileRepository.findById(id)
-                .orElseThrow(() -> new ProfileNotFoundException("profile not found"));
+    public Profile findProfile(@PathVariable @Min(1) Long id) {
+        Profile profile = profileRepository.findProfileById(id);
+        if (profile==null)
+                throw new ProfileNotFoundException("Profile with this id = " + id + " not found");
+        return profile;
     }
 
     @PostMapping
